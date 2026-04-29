@@ -1,8 +1,6 @@
 // # app/twitter-image.tsx
 import { createPortfolioOgImage, ogImageSize } from "@/lib/create-og-image";
 
-export const runtime = "edge";
-
 export const alt = "Sami Sherzaman — Full-Stack & AI Developer portfolio";
 
 export const size = ogImageSize;

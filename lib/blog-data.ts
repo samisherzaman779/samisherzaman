@@ -22,11 +22,20 @@ export const posts: BlogPost[] = [
     category: "Engineering",
     featured: true,
     body: [
-      "The App Router has matured into the default mental model for new projects. Treating layouts, loading, and error boundaries as first-class concerns up front saves weeks of retrofitting later.",
-      "Caching in Next 16+ rewards explicit intent: mark what is static, stamp what is time-bound, and isolate per-user regions so you never paint the wrong variant on the wrong user.",
-      "For large teams, convention matters as much as code. Co-locate route groups, enforce feature folders, and keep server actions small and audit-friendly—especially when billing and PII enter the picture.",
+      "🚀 The Reality of Scaling Next.js Apps\nShipping a small app is easy. Scaling it to support thousands of users and multiple developers? That’s where things break. In 2026, building scalable Next.js apps is less about hacks and more about discipline in architecture.",
+      
+      "🧠 App Router as a Mental Model\nThe App Router is no longer optional—it defines how your app behaves. Layouts, loading states, and error boundaries must be designed upfront. Treat them as core architecture, not afterthoughts.",
+      
+      "⚡ Smart Caching = Real Performance\nNext.js now rewards intentional caching. Decide what is static, what is dynamic, and what needs revalidation. Guessing leads to bugs. Precision leads to performance.",
+      
+      "📁 Structure Beats Talent\nEven great developers struggle in messy codebases. Use feature-based folders, isolate server actions, and keep logic predictable. A clean structure scales better than clever code.",
+      
+      "👥 Teams Need Conventions\nWhen multiple developers work together, conventions matter more than preferences. Standardize naming, routing, and data fetching patterns to avoid chaos.",
+      
+      "🏁 Final Thought\nScalability is not a feature you add later—it’s something you design from day one.",
     ],
   },
+
   {
     slug: "llm-integration-patterns",
     title: "LLM Integration Patterns That Don’t Break in Production",
@@ -36,25 +45,51 @@ export const posts: BlogPost[] = [
     readTime: "12 min read",
     category: "AI",
     body: [
-      "Users tolerate streaming delays; they do not tolerate silent failures. Wrap every model call with structured errors, backoff, and user-visible retry affordances.",
-      "Log token usage per request ID, not per server. You will need these numbers when finance asks why the GPU bill doubled in a weekend.",
-      "Prompt versioning belongs next to migration scripts—immutable snapshots help reproduce regressions when the vendor tweaks weights overnight.",
+      "🤖 AI Demos Are Easy, Production Is Not\nCalling an LLM API is simple. Building a system users can rely on is not. Production-grade AI requires reliability, monitoring, and cost awareness.",
+      
+      "⚡ Streaming Improves UX\nStreaming responses make your app feel fast. But partial responses must be handled carefully—broken streams destroy user trust instantly.",
+      
+      "🔁 Retries & Failure Handling\nFailures will happen. Always implement retries with exponential backoff. More importantly, show users what’s happening instead of failing silently.",
+      
+      "💰 Cost नियंत्रण is Critical\nLLMs are powerful—but expensive. Track token usage per request. Without visibility, your costs can explode overnight.",
+      
+      "🧾 Prompt Versioning\nTreat prompts like code. Version them, track changes, and keep history. When something breaks, you’ll need to know why.",
+      
+      "📊 Observability Wins\nLog everything: inputs, outputs, latency, failures. Without observability, debugging AI systems becomes guesswork.",
+      
+      "🏁 Final Thought\nSmart AI systems are not just intelligent—they are reliable, observable, and cost-efficient.",
     ],
   },
+
   {
     slug: "typescript-advanced-types",
     title: "TypeScript Patterns for API-First Teams",
     excerpt:
-      "From zod inference to end-to-end types with tRPC-style contracts — keeping the stack honest.",
+      "Designing APIs first and implementing later is becoming the standard. TypeScript enhances this workflow with safety, clarity, and scalability across teams.",
     date: "Feb 14, 2026",
     readTime: "10 min read",
     category: "TypeScript",
     body: [
-      "Infer schemas once at the boundary—HTTP handlers or RPC routers—and fan types outward through handlers instead of manually duplicating interfaces.",
-      "Discriminated unions shine when modelling webhook payloads or workflow states; exhaustiveness checks replace tribal knowledge about magic strings.",
-      "Reserve generics for reusable primitives; route handlers stay boring on purpose.",
+      "🚀 API-First is the New Default\nModern teams design APIs before writing implementation. This ensures alignment, reduces confusion, and speeds up development across frontend and backend.",
+      
+      "🧩 Contracts Define Everything\nYour API contract is your single source of truth. TypeScript allows you to represent it clearly, eliminating mismatches between systems.",
+      
+      "⚡ Type-Safe API Clients\nGenerics enable fully typed API calls. This removes guesswork and catches errors during development instead of production.",
+      
+      "🔄 Versioning Done Right\nAPIs evolve. Instead of breaking clients, extend types and introduce versions. Stability builds trust.",
+      
+      "📚 Self-Updating Documentation\nGenerate docs from TypeScript types. This ensures documentation never goes outdated and onboarding becomes easier.",
+      
+      "🧪 Strong Testing Culture\nTypes catch structure issues. Tests catch behavior issues. Together, they create reliable APIs.",
+      
+      "📊 Monitoring & Logging\nTyped logs and structured errors make debugging faster and systems more predictable.",
+      
+      "🛑 Better Error Handling\nDefine clear error shapes so clients can respond intelligently instead of guessing.",
+      
+      "🏁 Final Thought\nTypeScript turns APIs into reliable, scalable systems—not just endpoints.",
     ],
   },
+
   {
     slug: "design-systems-that-stick",
     title: "Design Systems That Teams Actually Maintain",
@@ -64,11 +99,20 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
     category: "Design",
     body: [
-      "Tokens encode intent—semantic colours beat hex hunting across sixty screens.",
-      "Accessibility baked into primitives beats audits bolted on before launch.",
-      "Storybook drift is real; snapshot meaningful interaction states, not just idle renders.",
+      "🎨 Why Most Design Systems Fail\nMany design systems look great on paper but fail in real usage. The problem is not design—it’s adoption and maintenance.",
+      
+      "🧱 Design Tokens = Foundation\nTokens represent intent, not just style. They make it easy to maintain consistency across large applications.",
+      
+      "♿ Accessibility First\nAccessibility should be built into components—not added later. This ensures inclusivity and avoids costly fixes.",
+      
+      "📚 Documentation Drives Adoption\nIf developers don’t understand how to use your system, they won’t use it. Good documentation is as important as good design.",
+      
+      "⚖️ Balance Simplicity & Power\nOver-engineered systems fail. Keep it simple, flexible, and easy to adopt.",
+      
+      "🏁 Final Thought\nA design system succeeds when teams actually use it—not when it looks perfect.",
     ],
   },
+
   {
     slug: "postgres-performance-notes",
     title: "PostgreSQL Performance Notes From the Field",
@@ -78,11 +122,20 @@ export const posts: BlogPost[] = [
     readTime: "9 min read",
     category: "Data",
     body: [
-      "Explain analyse becomes ritual—automate nightly captures against critical endpoints.",
-      "Composite indexes reward queries written around actual traffic shapes, not hypothetical futures.",
-      "Pools saturate faster than CPUs; observe queue depth before blaming Postgres itself.",
+      "⚙️ Performance is a Continuous Process\nDatabase performance is never 'done'. Real traffic reveals real problems—not test data.",
+      
+      "📌 Indexing Strategy Matters\nIndexes are powerful but must match real query patterns. Wrong indexes can hurt performance.",
+      
+      "🔍 Query Plan Analysis\nRegularly analyze query plans to identify bottlenecks. Automate this for critical endpoints.",
+      
+      "🔗 Connection Pooling\nPoor connection management can crash systems faster than slow queries. Always monitor pool usage.",
+      
+      "📊 Measure Everything\nWithout metrics, performance tuning becomes guesswork.",
+      
+      "🏁 Final Thought\nGood database performance comes from observation, not assumptions.",
     ],
   },
+
   {
     slug: "career-notes-senior-engineer",
     title: "What I Wish I Knew Earlier as a Senior Engineer",
@@ -92,9 +145,19 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
     category: "Career",
     body: [
-      "Writing beats debating—summaries unlock alignment faster than repeated meetings.",
-      "Ownership includes raising risks early with proposed mitigations—not theatrical heroics.",
-      "Documentation ages like milk unless someone maintains it—prefer living diagrams tied to CI.",
+      "🧠 Seniority is Not Just Code\nBeing a senior engineer is less about coding and more about thinking, communication, and decision-making.",
+      
+      "✍️ Writing > Talking\nClear written communication solves problems faster than long meetings.",
+      
+      "📌 Real Ownership\nOwnership means identifying risks early and proposing solutions—not just completing tasks.",
+      
+      "⚖️ Trade-offs Are Everywhere\nThere is no perfect solution. Learn to balance speed, quality, and complexity.",
+      
+      "🤝 Mentorship Matters\nHelping others grow makes the entire team stronger—and improves your own skills.",
+      
+      "📚 Living Documentation\nStatic docs die quickly. Keep documentation updated and tied to real systems.",
+      
+      "🏁 Final Thought\nGreat engineers don’t just build systems—they improve teams.",
     ],
   },
 ];

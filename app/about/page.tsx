@@ -22,68 +22,68 @@ import {
 
 const experiences = [
   {
-    role: "Senior Full-Stack Developer",
-    company: "TechCorp International",
-    location: "San Francisco, CA",
-    period: "2022 — Present",
+    role: "Machine Learning Developer",
+    company: "Codified Digital",
+    location: "Karachi, Pakistan",
+    period: "2025 — Present",
     description: "Leading development of enterprise SaaS platforms serving 500K+ users. Architecting microservices and AI integrations.",
     achievements: [
       "Reduced application load time by 65% through optimization",
       "Led team of 8 developers across 3 time zones",
       "Implemented AI-powered features increasing user engagement by 40%",
     ],
-    technologies: ["Next.js", "TypeScript", "Python", "AWS", "PostgreSQL"],
+    technologies: ["Next.js", "TypeScript", "Python", "AWS", "PostgreSQL", "React", "Node.js", "MongoDB", "Docker", "Redis"],
   },
   {
     role: "Full-Stack Developer",
-    company: "StartupXYZ",
-    location: "Remote",
-    period: "2020 — 2022",
+    company: "Tech Hunt Solutions",
+    location: "Karachi, Pakistan",
+    period: "2024 — 2024",
     description: "Built and scaled MVP to production-ready platform. Handled everything from database design to frontend architecture.",
     achievements: [
       "Built platform from 0 to 100K users in 18 months",
       "Implemented real-time features using WebSockets",
       "Designed and deployed CI/CD pipeline reducing deployment time by 80%",
     ],
-    technologies: ["React", "Node.js", "MongoDB", "Docker", "Redis"],
+    technologies: ["React", "Node.js", "MongoDB", "Docker", "Redis", "Next.js", "TypeScript", "Python", "AWS", "PostgreSQL"],
   },
   {
     role: "Frontend Developer",
-    company: "Digital Agency Pro",
-    location: "New York, NY",
-    period: "2018 — 2020",
+    company: "Tech Hunt Solutions",
+    location: "Karachi, Pakistan",
+    period: "2023 — 2024",
     description: "Developed high-performance websites and web applications for Fortune 500 clients.",
     achievements: [
       "Delivered 30+ projects with 100% client satisfaction",
       "Introduced component library reducing development time by 50%",
       "Mentored 4 junior developers",
     ],
-    technologies: ["React", "Vue.js", "Sass", "Webpack", "Figma"],
+    technologies: ["React", "Vue.js", "Sass", "Webpack", "Next.js", "TypeScript", ],
   },
 ];
 
 const education = [
   {
-    degree: "M.S. Computer Science",
-    institution: "Stanford University",
-    location: "Stanford, CA",
-    period: "2016 — 2018",
+    degree: "AI (Artificial Intelligence) and Cloud Computing",
+    institution: "Presidential Initiative for Artificial Intelligence and Computing (PIAIC)",
+    location: "Karachi, Pakistan",
+    period: "2024 — 2026",
     description: "Specialized in Artificial Intelligence and Distributed Systems",
   },
   {
-    degree: "B.S. Software Engineering",
-    institution: "MIT",
-    location: "Cambridge, MA",
-    period: "2012 — 2016",
-    description: "Dean's List, Graduated with Honors",
+    degree: "Software Engineering (Software Development)",
+    institution: "Presidential Initiative for Artificial Intelligence and Computing (PIAIC)",
+    location: "Karachi, Pakistan",
+    period: "2022 — 2024",
+    description: "Specialized in Software Development",
   },
 ];
 
 const certifications = [
-  { name: "AWS Solutions Architect Professional", issuer: "Amazon Web Services", date: "2023" },
-  { name: "Google Cloud Professional Developer", issuer: "Google", date: "2023" },
-  { name: "Meta Frontend Developer Professional", issuer: "Meta", date: "2022" },
-  { name: "OpenAI API Developer", issuer: "OpenAI", date: "2024" },
+  { name: "Frontend Developer", issuer: "Online Course", date: "2023" },
+  { name: "Backend Developer", issuer: "Online Course", date: "2024" },
+  { name: "Machine Learning Developer", issuer: "PIAIC", date: "2025" },
+  { name: "Cloud Computing", issuer: "PIAIC", date: "2026" },
 ];
 
 const philosophies = [
@@ -164,7 +164,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-muted relative shadow-xl ring-1 ring-border/60">
+            <div className="aspect-[5/5] rounded-2xl overflow-hidden bg-muted relative shadow-xl ring-1 ring-border/60">
               <Image
                 src="/images/profile_image/hero-image.png"
                 alt="Sami Sherzaman — portrait"

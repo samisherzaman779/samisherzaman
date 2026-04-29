@@ -2,7 +2,7 @@
 /** Canonical site URL (no trailing slash). Used for SEO, OG URLs, JSON-LD, sitemap. */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "http://localhost:3000";
+  "https://samisherzaman.vercel.app";
 
 export function absoluteUrl(path: string): string {
   const base = SITE_URL.replace(/\/$/, "");

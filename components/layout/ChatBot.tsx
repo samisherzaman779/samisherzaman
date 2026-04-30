@@ -209,7 +209,6 @@ export function ChatBot() {
                 </div>
                 <div>
                 <h3 className="text-sm font-bold">Sami's AI Assistant</h3>
-                  <p className="text-[10px] text-muted-foreground">Powered by Groq + Llama 3</p>
                 </div>
               </div>
               <button

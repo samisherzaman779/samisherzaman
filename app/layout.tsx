@@ -13,8 +13,11 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { rootMetadata } from "@/lib/site-metadata";
+import Script from "next/script";
 
 export const metadata = rootMetadata;
+
+const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,11 +31,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
@@ -55,6 +54,26 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
       </body>
+      {GA_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        gtag('js', new Date());
+        gtag('config', '${GA_ID}', {
+          page_path: window.location.pathname,
+        });
+      `}
+          </Script>
+        </>
+      )}
     </html>
   );
 }

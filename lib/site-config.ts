@@ -37,5 +37,8 @@ export const siteConfig = {
     "Web Development",
     "Pakistan",
     "Freelance Developer",
+    "Chatbot Development",
+    "Python Development",
+    "AI Solutions",
   ],
 } as const;
